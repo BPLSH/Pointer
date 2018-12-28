@@ -1,0 +1,17 @@
+#include<stdio.h>
+int SquareByValue(int num) {
+	int mult = (num * num);
+	return mult;
+}
+void SquareByReference(int *pnum) {
+	(*pnum) *= (*pnum);
+}
+int main(void) {
+	int num = 5;
+	int mult = SquareByValue(5);
+	printf("Call_by_value : %d\n", mult);
+	SquareByReference(&num);
+	printf("Call_by_reference : %d\n", num);
+
+	return 0;
+}
